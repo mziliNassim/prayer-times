@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Prayer Times</title>
+  </head>
+  <body>
+    <div class="header container">
+      <h1 class="header-Title">Priyer Times</h1>
+      <select class="header-select" name="citys" title="city">
+        <option disabled selected>Select a city</option>
+      </select>
+    </div>
+    <div class="content container">
+      <div class="content-header">
+        <h1 class="content-header__city">Marrakech</h1>
+        <div class="content-header__time">
+          <span class="date"></span>
+          <span class="time"></span>
+        </div>
+      </div>
+      <hr />
+      <div class="content-cards">
+        <div class="loding"></div>
+        <!-- <div class="content-cards__card">
+          <h2 class="content-cards__card-title">Al Fajr</h2>
+          <div class="content-cards__card-body">06:30</div>
+        </div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

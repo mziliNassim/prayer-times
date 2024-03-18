@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Sniglet:wght@400;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Sniglet", system-ui;
+}
+body {
+  background: linear-gradient(45deg, #1e0257, #0b0021);
+  min-height: 100vh;
+  overflow: auto;
+}
+.container {
+  padding: 5px 80px;
+}
+.loding {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: 6px solid white;
+  border-top-color: #5d1ed1;
+  border-radius: 50%;
+  animation: retate 1s linear infinite;
+}
+@keyframes retate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* !header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 80px;
+  background: #fff;
+}
+.header-Title {
+  font-weight: 600;
+  font-size: 45px;
+  text-align: center;
+}
+.header-select {
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid green;
+  border-radius: 10px;
+  background: transparent;
+  padding: 0 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+/* !content */
+.content {
+  height: calc(100% - 80px);
+}
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.content-header__time {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 10px;
+}
+.content-header__time .time {
+  /* text-align: center; */
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+.content hr {
+  margin: 30px 0;
+}
+.content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.content-cards__card {
+  width: 240px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.content-cards__card-title {
+  background: linear-gradient(45deg, #4c0deb, #6d2eb9);
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.content-cards__card-body {
+  height: 200px;
+  font-size: 80px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 200px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+.content-cards__card-body.Fajr {
+  background-image: url(../img/Fajr.jpeg);
+}
+.content-cards__card-body.Dhuhr {
+  background-image: url(../img/Dhuhr.jpg);
+}
+.content-cards__card-body.Asr {
+  background-image: url(../img/Asr.jpg);
+}
+.content-cards__card-body.Maghrib {
+  background-image: url(../img/Maghrib.jpg);
+}
+.content-cards__card-body.Isha {
+  background-image: url(../img/Isha.jpg);
+}
+
+/* !media query */
+
+@media screen and (max-width: 1239px) {
+  .content-cards__card {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .content-cards__card {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .content-cards__card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 730px) {
+  .header,
+  .content-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+  .content-header__time {
+    align-items: center;
+  }
+}
