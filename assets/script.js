@@ -2,7 +2,8 @@
 let select = document.querySelector(".header-select");
 select.addEventListener("change", () => handleSelelct());
 
-// API Request
+// API Request 
+// ===> Promis
 // let handleSelelct;
 // (handleSelelct = function () {
 //   let city = select.value !== "Select a city" ? select.value : "Marrakech";
@@ -32,6 +33,7 @@ select.addEventListener("change", () => handleSelelct());
 //     });
 // })();
 
+// ===> Axios
 let handleSelelct;
 (handleSelelct = function () {
   let city = select.value !== "Select a city" ? select.value : "Marrakech";
