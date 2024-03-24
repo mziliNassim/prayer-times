@@ -1,46 +1,13 @@
 // DOM
-let select = document.querySelector(".header-select");
+let select = document.querySelector(".content-header__select");
 select.addEventListener("change", () => handleSelelct());
 
-// API Request 
-// ===> Promis
-// let handleSelelct;
-// (handleSelelct = function () {
-//   let city = select.value !== "Select a city" ? select.value : "Marrakech";
-//   let cards = document.querySelector(".content-cards");
-//   let url = `http://api.aladhan.com/v1/timingsByCity?city=${city}&country=MA`;
-
-//   document.querySelector(".content-header__city").innerHTML = city;
-//   cards.innerHTML = '<div class="loding"></div>';
-//   fetch(url)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       let { data: times } = data;
-//       let timesExist = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
-
-//       cards.innerHTML = "";
-//       timesExist.map((ele) => {
-//         cards.innerHTML += `
-//           <div class="content-cards__card">
-//             <h2 class="content-cards__card-title">${ele}</h2>
-//             <div class="content-cards__card-body ${ele}">${times.timings[ele]}</div>
-//           </div>
-//         `;
-//       });
-//     })
-//     .catch((err) => {
-//       console.log("API Err : ", err);
-//     });
-// })();
-
-// ===> Axios
 let handleSelelct;
 (handleSelelct = function () {
   let city = select.value !== "Select a city" ? select.value : "Marrakech";
   let cards = document.querySelector(".content-cards");
   let url = `http://api.aladhan.com/v1/timingsByCity?city=${city}&country=MA`;
 
-  document.querySelector(".content-header__city").innerHTML = city;
   cards.innerHTML = '<div class="loding"></div>';
   axios
     .get(url)

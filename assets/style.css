@@ -16,13 +16,13 @@ body {
   padding: 5px 80px;
 }
 .loding {
-  width: 100px;
-  height: 100px;
-  background: transparent;
+  animation: retate 1s linear infinite;
   border: 6px solid white;
   border-top-color: #5d1ed1;
   border-radius: 50%;
-  animation: retate 1s linear infinite;
+  background: transparent;
+  width: 100px;
+  height: 100px;
 }
 @keyframes retate {
   0% {
@@ -38,26 +38,21 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  min-height: 80px;
   background: #fff;
+  min-height: 80px;
 }
 .header-Title {
   font-weight: 600;
   font-size: 45px;
   text-align: center;
 }
-.header-select {
-  cursor: pointer;
-  border: none;
-  border-bottom: 3px solid green;
-  border-radius: 10px;
-  background: transparent;
-  padding: 0 10px;
-  width: 200px;
-  height: 40px;
-  font-size: 25px;
-  text-transform: capitalize;
+.header-socials a {
+  margin: 0 10px;
+  color: #0b0021;
+  font-size: 30px;
+  text-decoration: none;
 }
+
 /* !content */
 .content {
   height: calc(100% - 80px);
@@ -74,17 +69,30 @@ body {
 .content-header__time {
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 10px;
 }
 .content-header__time .time {
-  /* text-align: center; */
   font-size: 40px;
   letter-spacing: 2px;
 }
+.content-header__select {
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid green;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 10px;
+  width: 250px;
+  height: 40px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+/* HR */
 .content hr {
   margin: 30px 0;
 }
+/* HR */
 .content-cards {
   display: flex;
   flex-wrap: wrap;
@@ -94,8 +102,8 @@ body {
   margin-top: 30px;
 }
 .content-cards__card {
-  width: 240px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  width: 240px;
 }
 .content-cards__card-title {
   background: linear-gradient(45deg, #4c0deb, #6d2eb9);
@@ -105,14 +113,14 @@ body {
   text-transform: capitalize;
 }
 .content-cards__card-body {
+  background-position: center;
+  background-size: cover;
   height: 200px;
-  font-size: 80px;
-  font-weight: 600;
   color: #fff;
+  font-weight: 600;
+  font-size: 80px;
   line-height: 200px;
   text-align: center;
-  background-size: cover;
-  background-position: center;
 }
 .content-cards__card-body.Fajr {
   background-image: url(../img/Fajr.jpeg);
@@ -151,8 +159,8 @@ body {
   .header,
   .content-header {
     flex-direction: column;
-    padding-bottom: 20px;
     gap: 20px;
+    padding-bottom: 20px;
   }
   .content-header__time {
     align-items: center;
